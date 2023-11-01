@@ -1,0 +1,45 @@
+package com.mysite.buddy.buddy;
+
+import java.security.Principal;
+import com.mysite.sbb.user.SiteUser;
+import com.mysite.sbb.user.UserService;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.data.domain.Page;
+import org.springframework.security.access.prepost.PreAuthorize;
+import jakarta.validation.Valid;
+import org.springframework.validation.BindingResult;
+import com.mysite.sbb.answer.AnswerForm;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.server.ResponseStatusException;
+
+import lombok.RequiredArgsConstructor;
+
+
+@RequestMapping("/buddy")
+@RequiredArgsConstructor
+@Controller
+public class BuddyController {
+	
+	@GetMapping("/main")
+	public String main() {
+		return "main";
+	}
+	
+	@GetMapping("/detail1")
+	public String detail1() {
+		return "detail1";
+	}
+	
+	@GetMapping("/detail2")
+	public String detail2() {
+		return "detail2";
+	}
+
+}

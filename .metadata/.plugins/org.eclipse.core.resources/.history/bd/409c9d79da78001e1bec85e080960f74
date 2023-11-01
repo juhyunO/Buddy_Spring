@@ -1,0 +1,38 @@
+<html layout:decorate="~{layout}">
+<section layout:fragment="content" data-bs-version="5.1" class="form7 cid-twoviCRZxQ" id="form7-20">
+    <div  class="container">
+		<br><br>
+        <div class="mbr-section-head">
+            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                <strong><span style="font-family: 'Lilita One',cursive; font-size:50px;">STAY</span></strong>
+            </h3>
+            
+        </div>
+        <br><br>
+        <div class="row justify-content-center mt-4">
+            <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                <form th:action="@{/user/login}" method="post"class="mbr-form form-with-styler mx-auto">
+					<div th:if="${param.error}">
+						<div class="alert alert-danger">
+							사용자ID 또는 비밀번호를 확인해 주세요.
+						</div>
+					</div>
+                    <div class="dragArea row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3">
+							<label for="username" class="form-label">사용자ID</label>
+                            <input type="text" class="form-control" name="username" id="username">
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group mb-3">
+							<label for="passoword" class="form-label">비밀번호</label>
+                            <input type="password" class="form-control" name="password" id="password">
+                        </div>
+                        <div class="col-auto mbr-section-btn align-center">
+                            <button type="submit" class="btn btn-warning">LOGIN</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+</html>

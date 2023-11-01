@@ -1,0 +1,5 @@
+package com.mysite.buddy.question;
+
+public class Question {
+
+}

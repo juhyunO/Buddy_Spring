@@ -1,0 +1,5 @@
+package com.mysite.buddy.buddy;
+
+public class BuddyController {
+
+}
